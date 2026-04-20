@@ -1,0 +1,285 @@
+type: panel
+path: ""
+cards:
+  - type: picture-elements
+    elements:
+      - type: image
+        style:
+          left: 50%
+          top: 50%
+          width: 100%
+        entity: light.third_reality_smart_color_bulb
+        hold_action:
+          action: none
+        tap_action:
+          action: none
+        state_image:
+          "on": /local/room3d/smart-color-bulb.png
+          "off": /local/room3d/transparent.png
+          unavailable: /local/room3d/transparent.png
+      - type: image
+        style:
+          left: 50%
+          top: 50%
+          width: 100%
+        hold_action:
+          action: none
+        tap_action:
+          action: none
+        state_image:
+          "on": /local/room3d/yeelight-main-light.png
+          "off": /local/room3d/transparent.png
+          unavailable: /local/room3d/transparent.png
+        entity: light.yeelight_lamp15_0x1c0863cc
+      - type: image
+        style:
+          left: 50%
+          top: 50%
+          width: 100%
+        entity: light.h6056
+        tap_action:
+          action: none
+        hold_action:
+          action: none
+        state_image:
+          "on": /local/room3d/govee-lights-bar.png
+          "off": /local/room3d/transparent.png
+          unavailable: /local/room3d/transparent.png
+      - type: image
+        style:
+          left: 50%
+          top: 50%
+          width: 100%
+        entity: light.yeelight_bslamp3_0x1c53cb67
+        tap_action:
+          action: none
+        hold_action:
+          action: none
+        state_image:
+          "on": /local/room3d/yeelight-bedside-lamp.png
+          "off": /local/room3d/transparent.png
+          unavailable: /local/room3d/transparent.png
+      - type: image
+        style:
+          left: 50%
+          top: 50%
+          width: 100%
+        entity: light.yeelight_lamp15_0x1c0863cc_ambilight
+        tap_action:
+          action: none
+        hold_action:
+          action: none
+        state_image:
+          "on": /local/room3d/yeelight-ambilight.png
+          "off": /local/room3d/transparent.png
+          unavailable: /local/room3d/transparent.png
+      - type: image
+        style:
+          left: 50%
+          top: 50%
+          width: 100%
+        entity: light.wled_segment_2
+        state_image:
+          "on": /local/room3d/wled-strip-down.png
+          "off": /local/room3d/transparent.png
+          unavailable: /local/room3d/transparent.png
+        tap_action:
+          action: none
+        hold_action:
+          action: none
+      - type: image
+        style:
+          left: 50%
+          top: 50%
+          width: 100%
+        entity: light.wled_segment_1
+        tap_action:
+          action: none
+        hold_action:
+          action: none
+        state_filter: {}
+        state_image:
+          "on": /local/room3d/wled-strip-up.png
+          "off": /local/room3d/transparent.png
+          unavailable: /local/room3d/transparent.png
+      - type: image
+        style:
+          left: 50%
+          top: 50%
+          width: 100%
+        entity: switch.tp_link_power_strip_918e_bulb_lights
+        tap_action:
+          action: none
+        hold_action:
+          action: none
+        state_image:
+          "on": /local/room3d/govee-strings-lights.png
+          "off": /local/room3d/transparent.png
+          unavailable: /local/room3d/transparent.png
+      - type: conditional
+        conditions:
+          - entity: light.wled_segment_1
+            state: "on"
+          - entity: light.wled_segment_2
+            state: "on"
+        elements:
+          - type: image
+            image: /local/room3d/1-4.png
+            style:
+              left: 50%
+              top: 50%
+              width: 100%
+      - type: conditional
+        conditions:
+          - entity: light.yeelight_lamp15_0x1c0863cc_ambilight
+            state: "on"
+          - entity: light.yeelight_lamp15_0x1c0863cc
+            state: "on"
+        elements:
+          - type: image
+            image: /local/room3d/1-3.png
+            style:
+              left: 50%
+              top: 50%
+              width: 100%
+      - type: state-icon
+        style:
+          left: 68%
+          top: 35.4%
+          scale: 200%
+          transform: rotate(-95deg)
+        entity: light.third_reality_smart_color_bulb
+        icon: mdi:lightbulb-on-30
+        tap_action:
+          action: toggle
+        state_color: true
+        hold_action:
+          action: none
+      - type: state-icon
+        style:
+          left: 66.55%
+          top: 47%
+          scale: 180%
+          transform: rotate(86deg)
+        entity: light.yeelight_lamp15_0x1c0863cc
+        hold_action:
+          action: none
+        tap_action:
+          action: toggle
+        icon: mdi:wall-sconce-flat-outline
+      - type: state-icon
+        style:
+          left: 30.1%
+          top: 54%
+          scale: 130%
+          transform: rotate(93deg)
+        entity: light.h6056
+        tap_action:
+          action: toggle
+        hold_action:
+          action: none
+        icon: mdi:toggle-switch-variant
+      - type: state-icon
+        style:
+          left: 66%
+          top: 27%
+          scale: 150%
+        entity: light.yeelight_bslamp3_0x1c53cb67
+        tap_action:
+          action: toggle
+        hold_action:
+          action: none
+        icon: ""
+      - type: state-icon
+        style:
+          left: 67.6%
+          top: 53.5%
+          scale: 180%
+          transform: rotate(-95deg)
+        entity: light.yeelight_lamp15_0x1c0863cc_ambilight
+        tap_action:
+          action: toggle
+        hold_action:
+          action: none
+        icon: mdi:wall-sconce-flat
+      - type: state-icon
+        style:
+          left: 64.4%
+          top: 35%
+          scale: 150%
+          transform: rotate(-90deg)
+        entity: light.wled_segment_2
+        tap_action:
+          action: toggle
+        hold_action:
+          action: none
+        icon: ""
+      - type: state-icon
+        style:
+          left: 44.5%
+          top: 8.5%
+          scale: 150%
+        entity: light.wled_segment_1
+        tap_action:
+          action: toggle
+        hold_action:
+          action: none
+        icon: ""
+      - type: state-label
+        style:
+          left: 39.4%
+          top: 9%
+          scale: 120%
+          color: white
+          transform: rotate(-95deg)
+        entity: binary_sensor.thirdreality_door_sensor
+        tap_action:
+          action: none
+        hold_action:
+          action: none
+      - type: state-label
+        style:
+          left: 37.1%
+          top: 68%
+          scale: 130%
+          color: white
+          transform: rotate(-90deg)
+        entity: binary_sensor.motion_sensor
+        tap_action:
+          action: none
+        hold_action:
+          action: none
+      - type: state-icon
+        style:
+          left: 50%
+          top: 50%
+          scale: 200%
+        entity: switch.tp_link_power_strip_918e_bulb_lights
+        icon: mdi:string-lights-off
+        tap_action:
+          action: toggle
+        hold_action:
+          action: none
+    image:
+      media_content_id: local/room3d/default.png
+      media_content_type: ""
+      metadata:
+        navigateIds:
+          - {}
+          - media_content_type: ""
+            media_content_id: __MANUAL_ENTRY__
+    card_mod:
+      style: |
+        ha-card {
+          background: #3B3B3B !important;
+        }
+subview: false
+background:
+  opacity: 100
+  alignment: center
+  size: cover
+  repeat: repeat
+  attachment: scroll
+show_icon_and_title: false
+icon: mdi:bed
+title: Room
