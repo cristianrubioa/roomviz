@@ -3,7 +3,7 @@
 3D interactive room dashboard powered by Home Assistant.
 This project turns a Sweet Home 3D model into Blender renders mapped to device/entity states, including single-light states and composite lighting scenes for a realistic room visualization.
 
-![Demo video](/assets/demo/5.ha.gif)
+[![Demo](assets/demo/preview.png)](assets/demo/preview.webm)
 
 
 ## Pipeline
