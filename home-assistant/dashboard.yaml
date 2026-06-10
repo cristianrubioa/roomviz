@@ -1,5 +1,5 @@
 type: panel
-path: ""
+path: room
 cards:
   - type: picture-elements
     elements:
@@ -161,12 +161,13 @@ cards:
           top: 47%
           scale: 180%
           transform: rotate(86deg)
-        entity: light.yeelight_lamp15_0x1c0863cc
+        entity: light.192_168_50_10
         hold_action:
           action: none
         tap_action:
           action: toggle
         icon: mdi:wall-sconce-flat-outline
+        title: Yeelight Main Light
       - type: state-icon
         style:
           left: 30.1%
@@ -184,24 +185,26 @@ cards:
           left: 66%
           top: 27%
           scale: 150%
-        entity: light.yeelight_bslamp3_0x1c53cb67
+        entity: light.192_168_50_11
         tap_action:
           action: toggle
         hold_action:
           action: none
-        icon: ""
+        icon: mdi:lamp
+        title: Bedside Lamp
       - type: state-icon
         style:
           left: 67.6%
           top: 53.5%
           scale: 180%
           transform: rotate(-95deg)
-        entity: light.yeelight_lamp15_0x1c0863cc_ambilight
+        entity: light.192_168_50_10_ambilight
         tap_action:
           action: toggle
         hold_action:
           action: none
         icon: mdi:wall-sconce-flat
+        title: Yeelight Ambilight
       - type: state-icon
         style:
           left: 64.4%
@@ -255,11 +258,52 @@ cards:
           top: 50%
           scale: 200%
         entity: switch.tp_link_power_strip_918e_bulb_lights
-        icon: mdi:string-lights-off
+        icon: mdi:string-lights
         tap_action:
           action: toggle
         hold_action:
           action: none
+      - type: icon
+        style:
+          left: 3%
+          top: 99%
+          color: white
+          scale: 200%
+        icon: mdi:arrow-left
+        tap_action:
+          action: navigate
+          navigation_path: /test-home/demo
+      - type: state-label
+        style:
+          left: 59%
+          top: 17%
+          scale: 110%
+          color: white
+        entity: cover.blinds_motor_curtain
+        attribute: current_position
+        suffix: "%"
+        tap_action:
+          action: none
+        hold_action:
+          action: none
+      - type: state-label
+        style:
+          left: 56.7%
+          top: 17%
+          scale: 110%
+          color: white
+        entity: cover.blinds_motor_curtain
+        tap_action:
+          action: none
+        hold_action:
+          action: none
+      - type: state-icon
+        style:
+          left: 58.2%
+          top: 14.5%
+          scale: 150%
+        entity: cover.blinds_motor_curtain
+        state_color: false
     image:
       media_content_id: local/room3d/default.png
       media_content_type: ""
@@ -281,5 +325,5 @@ background:
   repeat: repeat
   attachment: scroll
 show_icon_and_title: false
-icon: mdi:bed
+icon: mdi:floor-plan
 title: Room
